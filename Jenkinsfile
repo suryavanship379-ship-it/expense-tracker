@@ -14,8 +14,8 @@ pipeline {
 
         stage('Python Environment') {
             steps {
-                bat 'python --version'
-                bat 'python -m venv .venv'
+                bat '"C:\\Users\\Atharva\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" --version'
+bat '"C:\\Users\\Atharva\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m venv .venv'
                 bat '.venv\\Scripts\\python.exe -m pip install --upgrade pip'
                 bat '.venv\\Scripts\\python.exe -m pip install -r requirements.txt'
             }

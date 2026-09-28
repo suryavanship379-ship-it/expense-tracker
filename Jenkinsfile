@@ -30,13 +30,13 @@ bat '"C:\\Users\\Atharva\\AppData\\Local\\Programs\\Python\\Python313\\python.ex
 
         stage('Docker Check') {
             steps {
-                bat 'docker version'
+                bat '"C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe" version'
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t expense-tracker:%BUILD_NUMBER% .'
+                bat '"C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe" build -t expense-tracker:%BUILD_NUMBER% .'
             }
         }
     }
